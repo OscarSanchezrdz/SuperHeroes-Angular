@@ -1,0 +1,14 @@
+<h1 class="animated bounceInRight">Heroes <small>Marvel y Dc</small></h1>
+<hr>
+<div class="card-columns">
+  <div class="card animated flipInY" *ngFor="let heroe of heroes; let i=index">
+    <img class="card-img-top" [src]="heroe.img" [alt]="heroe.nombre">
+    <div class="card-body">
+      <h5 class="card-title">{{heroe.nombre}}</h5>
+      <p class="card-text">{{heroe.bio}}</p>
+      <p class="card-text"><small class="text-muted">{{heroe.aparicion}}</small></p>
+      <a class="btn btn-outline-primary btn-block" [routerLink]="['/heroe',i]">Ver mas...</a>
+      <!-- <button type="button" name="button"class="btn btn-outline-primary btn-block">Ver mas...</button> -->
+    </div>
+  </div>
+</div>
